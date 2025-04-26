@@ -1,0 +1,27 @@
+N = 100000
+
+=== INSERT ===
+vector back   : 14.00 ms
+vector front  : 17310.00 ms
+vector middle : 8359.00 ms
+
+deque  back   : 10.00 ms
+deque  front  : 10.00 ms
+deque  middle : 10403.00 ms
+
+list   back   : 16.00 ms
+list   front  : 17.00 ms
+list   middle : 123584.00 ms
+
+=== ERASE ===
+vector back   : 5.00 ms
+vector front  : 17289.00 ms
+vector middle : 9051.00 ms
+
+deque  back   : 8.00 ms
+deque  front  : 7.00 ms
+deque  middle : 14540.00 ms
+
+list   back   : 10.00 ms
+list   front  : 11.00 ms
+list   middle : 40176.00 ms
