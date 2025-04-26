@@ -1,26 +1,7 @@
 # Zadanie 1
 
-Cel – zmierzyć czasy (ms) wykonania **N** powtórzeń operacji na obiektach
-`TString` w trzech kontenerach standardowych.
+W zadaniu wykorzystamy klasę TString. Napisz program testujący czas wykonania wielokrotnie powtórzonych operacji: a) wstawiania na końcu kontenera (emplace_back), b) wstawiania na początku kontenera (insert lub emplace_front, zależnie od kontenera), c) wstawiania w środku kontenera, dla std::vector<TString>, std::deque<TString>, std::list<TString>. Następnie tak samo dla usuwania pojedynczego obiektu a) na końcu, b) na początku, c) w środku kontenera.
 
-╔══════════════╦══════════════════════════╦══════════════════════════╦════════════════════════════════════╗
-║ Operacja     ║ vector                   ║ deque                    ║ list                               ║
-╠══════════════╬══════════════════════════╬══════════════════════════╬════════════════════════════════════╣
-║ insert-koniec║ emplace_back             ║ emplace_back             ║ emplace_back                       ║
-║ insert-pocz. ║ insert(begin())          ║ emplace_front            ║ emplace_front                      ║
-║ insert-środek║ insert(begin()+size/2)   ║ insert(begin()+size/2)   ║ insert(next(begin(), size/2))      ║
-║ erase-koniec ║ pop_back                 ║ pop_back                 ║ pop_back                           ║
-║ erase-pocz.  ║ erase(begin())           ║ pop_front                ║ pop_front                          ║
-║ erase-środek ║ erase(begin()+size/2)    ║ erase(begin()+size/2)    ║ erase(next(begin(), size/2))       ║
-╚══════════════╩══════════════════════════╩══════════════════════════╩════════════════════════════════════╝
+Pliki tstring.h i tstring.cpp są wystarczające jeśli chodzi o klasę TString. W pliku main.cpp mamy gotowy program wywołujący dane operacje N razy. Przed programem przygotowane są już funkcje, których definicję należy uzupełnić. Idea tego co jest oczekiwane, zobrazowana jest w pozostawionej pełnej definicji insert_back_vector. Uwaga: do zadania, oprócz kodu, należy dołączyć wypełniony swoimi wartościami plik (patrz załączony plik wyniki.txt). Bez wyników punktacja będzie obniżona. Warto, we własnym zakresie, zbadać jakie są różnice gdy kompiluje się np. z flagą –g, albo –O3.
 
-Co musisz zrobić
-----------------
-1. **Uzupełnij** definicje `insert_*` i `erase_*` w `main.cpp`.  
-   • Każda funkcja przyjmuje `std::size_t reps` (liczbę powtórzeń)  
-     i zwraca czas w milisekundach.  
-   • Jako wzór służy pełna definicja `insert_back_vector`.
-
-2. **Wypełnij** plik `wyniki.txt` uzyskanymi czasami.  
-   (Brak wyników → obniżona ocena.)
 
